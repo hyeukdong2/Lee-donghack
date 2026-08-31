@@ -11,6 +11,8 @@ namespace BETA7
         public Vector3 dir;
         public bool isPlayer = true;
 
+        public GameObject Item;
+
         void Start()
         {
         
@@ -34,6 +36,8 @@ namespace BETA7
             {
                 if (other.CompareTag("Enemy"))
                 {
+                    Instantiate(Item, this. transform. position,
+                        Item. transform. rotation);
                     Destroy(other.gameObject);
                     Destroy(gameObject);
                 }
@@ -50,3 +54,4 @@ namespace BETA7
         }
     }
 }
+ds
